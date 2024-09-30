@@ -1,0 +1,11 @@
+services:
+  djangoapp:
+    container_name: djangoapp
+    build:
+      context: .
+    env_file:
+      - path: ./dotenv/.env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./djangoapp:/djangoapp
